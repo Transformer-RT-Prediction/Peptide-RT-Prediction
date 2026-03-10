@@ -7,7 +7,7 @@ git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
 ```
 # 2. Datasets
-## 2.1. Different LC types of Datasets
+## 2.1. Different LC types
 
 Total 11 types of datasets were utilized -
   
