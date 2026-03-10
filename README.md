@@ -35,12 +35,28 @@ SCX - DeepLC SCX
 | DeepLC Luna Silica | 36,823 | 7–48 |
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
 
-## 2.2 Dataset Structure
+## 2.2 Dataset Structure (Input files)
 ### 2.2.1 Unmodified peptides
-
+```python
+| Sequence        | RT    |
+|:-----------------|:-------:|
+| AAAAAAAAAAPAAAAATAPTTATATATAAQ | 67.3  |
+| AAAAAAALQAK     | 20.42 |
+| AAAEVAGQFVTK    | 57.61 |
+| AAAEVNQDYGLDPK  | 43.16 |
+| AAALEAMK        | 23.54 |
+```
 
 ### 2.2.2 Modified peptides
-
+```python
+| Sequence | Modifications | RT |
+|:---------|:--------------:|:---:|
+| LLYEALVDCK | 1xCarbamidomethyl [C9] | 70.71 |
+| IYYGGSVTGATCK | 1xCarbamidomethyl [C12] | 38.56 |
+| ILYSQCGDVMR | 1xCarbamidomethyl [C6] | 47.68 |
+| ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11] | 56.89 |
+| IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
+```
 
 
 
