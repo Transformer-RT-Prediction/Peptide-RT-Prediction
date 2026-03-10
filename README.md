@@ -9,7 +9,8 @@ cd Peptide-RT-Prediction
 # 2. Datasets
 ## 2.1 Different LC types of Datasets
 <p align="justify">
-Total 11 types of datasets were utilized - 
+Total 11 types of datasets were utilized -
+  
   - Exp. HeLa (unmodified and modified), 
   - DeepRT HeLa (unmodified and modified), 
   - DeepRT Yeast, 
