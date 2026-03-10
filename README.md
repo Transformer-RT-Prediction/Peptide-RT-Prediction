@@ -25,11 +25,9 @@ Total 11 types of datasets were utilized -
 <p align="justify">
 RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
 </p>
-
 <p align="justify">
 HILIC - DeepLC Luna HILIC
 </p>
-
 <p align="justify">
 SCX - DeepLC SCX
 </p>
