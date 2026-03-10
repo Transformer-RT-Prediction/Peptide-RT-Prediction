@@ -32,7 +32,7 @@ HILIC - DeepLC Luna HILIC
 SCX - DeepLC SCX
 </p>
 
-
+|:--------:|:-------------------:|:-------------------:|
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
 | Exp. HeLa | 4,213 | 6–33 |
