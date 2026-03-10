@@ -13,7 +13,9 @@ Total 11 types of datasets were utilized - Exp. HeLa (unmodified and modified), 
 </p>
 
 RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
+
 HILIC - DeepLC Luna HILIC
+
 SCX - DeepLC SCX
 
 | Dataset | Number of Peptides | Peptide Seq Length |
