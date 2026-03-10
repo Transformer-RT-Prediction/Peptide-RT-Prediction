@@ -12,14 +12,11 @@ cd Peptide-RT-Prediction
 Total 11 datasets including 3 LC conditions were utilized -
   
 <p align="justify">
-RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
+1. RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
 </p>
-<p align="justify">
-HILIC - DeepLC Luna HILIC
+2. HILIC - DeepLC Luna HILIC
 </p>
-<p align="justify">
-SCX - DeepLC SCX
-</p>
+3. SCX - DeepLC SCX
 
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
