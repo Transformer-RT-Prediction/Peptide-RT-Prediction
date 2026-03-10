@@ -9,7 +9,7 @@ cd Peptide-RT-Prediction
 # 2. Datasets
 ## 2.1. Different LC types
 
-Total 11 types of datasets were utilized -
+Total 11 datasets including 3 LC conditions were utilized -
   
 <p align="justify">
 RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
