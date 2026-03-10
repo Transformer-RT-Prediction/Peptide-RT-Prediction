@@ -15,6 +15,7 @@ Total 11 datasets including 3 LC conditions were utilized -
 1. RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
 </p>
 2. HILIC - DeepLC Luna HILIC
+
 3. SCX - DeepLC SCX
 </p>
 
