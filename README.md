@@ -1,7 +1,7 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
-![tensorflow](https://img.shields.io/badge/tensorflow-2.20.0-blue)
+![tensorflow](https://img.shields.io/badge/tensorflow-version-2.20.0-blue)
 
 # 1. Installation
 ```python
