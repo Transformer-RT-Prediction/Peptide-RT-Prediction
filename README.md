@@ -8,6 +8,22 @@ git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
 ```
 # 2. Datasets
+Total 11 types of datasets were utilized - Exp. HeLa (unmodified and modified), DeepRT HeLa (unmodified and modified), DeepRT Yeast, DeepRT Atlantis Silica, DeepLC Xbridge, DeepLC SCX, DeepLC Luna HILIC, DeepLC Luna Silica and DeepLC Misc. (modified).
+| Dataset | Number of Peptides | Peptide Seq Length |
+|--------|-------------------|-------------------|
+| Exp. HeLa | 4,213 | 6–33 |
+| Exp. HeLa (modified) | 704 | 6–27 |
+| DeepRT HeLa | 3,413 | 6–50 |
+| DeepRT HeLa (modified) | 2,243 | 7–50 |
+| DeepRT Yeast | 14,361 | 6–38 |
+| DeepRT Atlantis Silica | 39,091 | 6–49 |
+| DeepLC Xbridge | 40,037 | 6–51 |
+| DeepLC SCX | 30,471 | 6–49 |
+| DeepLC Luna HILIC | 36,080 | 7–51 |
+| DeepLC Luna Silica | 36,823 | 7–48 |
+| DeepLC Misc. (modified) | 14,557 | 7–45 |
+
+## Dataset Types
 
 
 ## RT prediction package – usage guide
