@@ -1,15 +1,16 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
-
 # 1. Installation
 ```python
 git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
 ```
-# 2. 
-## 2.1 Datasets
-Total 11 types of datasets were utilized - Exp. HeLa (unmodified and modified), DeepRT HeLa (unmodified and modified), DeepRT Yeast, DeepRT Atlantis Silica, DeepLC Xbridge, DeepLC SCX, DeepLC Luna HILIC, DeepLC Luna Silica and DeepLC Misc. (modified).
+# 2. Datasets
+## 2.1 Different LC types of Datasets
+<p align="justify">
+Total 11 types of datasets were utilized - Exp. HeLa (unmodified and modified), DeepRT HeLa (unmodified and modified), DeepRT Yeast, DeepRT Atlantis Silica, DeepLC Xbridge, DeepLC SCX, DeepLC Luna HILIC, DeepLC Luna Silica and DeepLC Misc. (modified)
+</p>
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
 | Exp. HeLa | 4,213 | 6–33 |
