@@ -47,7 +47,6 @@ SCX - DeepLC SCX
 
 
 ### 2.2.2 Modified peptides
-```python
 | Sequence | Modifications | RT |
 |:---------|:--------------:|:---:|
 | LLYEALVDCK | 1xCarbamidomethyl [C9] | 70.71 |
@@ -55,7 +54,6 @@ SCX - DeepLC SCX
 | ILYSQCGDVMR | 1xCarbamidomethyl [C6] | 47.68 |
 | ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11] | 56.89 |
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
-```
 
 
 
