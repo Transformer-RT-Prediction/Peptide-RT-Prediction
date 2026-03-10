@@ -33,18 +33,18 @@ Total 11 datasets including 3 LC conditions were utilized -
 | DeepLC Luna Silica | 36,823 | 7–48 |
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
 
-## 2.2 Dataset Structure (Input files)
-### 2.2.1 Unmodified peptides
+## 2.2. Dataset Structure (Input files)
+### 2.2.1. Unmodified peptides
 | Sequence        | RT    |
 |:-----------------|:-------:|
 | AAAAAAAAAAPAAAAATAPTTATATATAAQ | 67.3  |
 | AAAAAAALQAK     | 20.42 |
-| AAAEVAGQFVTK    | 57.61 |
+| AAAEVAGQFVT  | 57.61 |
 | AAAEVNQDYGLDPK  | 43.16 |
 | AAALEAMK        | 23.54 |
 
 
-### 2.2.2 Modified peptides
+### 2.2.2. Modified peptides
 | Sequence | Modifications | RT |
 |:---------|:--------------:|:---:|
 | LLYEALVDCK | 1xCarbamidomethyl [C9] | 70.71 |
