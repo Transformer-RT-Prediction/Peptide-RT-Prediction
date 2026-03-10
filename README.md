@@ -10,8 +10,7 @@ cd Peptide-RT-Prediction
 ## 2.1. Different LC types of Datasets
 <p align="justify">
 Total 11 types of datasets were utilized -
-  
-  - Exp. HeLa (unmodified and modified), DeepRT HeLa (unmodified and modified), DeepRT Yeast, DeepRT Atlantis Silica, DeepLC Xbridge, DeepLC SCX, DeepLC Luna HILIC, DeepLC Luna Silica and DeepLC Miscellaneous (Misc. modified)
+- Exp. HeLa (unmodified and modified), DeepRT HeLa (unmodified and modified), DeepRT Yeast, DeepRT Atlantis Silica, DeepLC Xbridge, DeepLC SCX, DeepLC Luna HILIC, DeepLC Luna Silica and DeepLC Miscellaneous (Misc. modified)
 </p>
 
 <p align="justify">
