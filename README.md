@@ -1,7 +1,7 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
-[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow&logoColor=white)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-orange)](https://scikit-learn.org/)
+[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow&logoColor=orange)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-orange)](https://scikit-learn.org/)
 
 # 1. Installation
 ```python
