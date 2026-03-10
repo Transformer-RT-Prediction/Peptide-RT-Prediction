@@ -37,7 +37,6 @@ SCX - DeepLC SCX
 
 ## 2.2 Dataset Structure (Input files)
 ### 2.2.1 Unmodified peptides
-```python
 | Sequence        | RT    |
 |:-----------------|:-------:|
 | AAAAAAAAAAPAAAAATAPTTATATATAAQ | 67.3  |
@@ -45,7 +44,7 @@ SCX - DeepLC SCX
 | AAAEVAGQFVTK    | 57.61 |
 | AAAEVNQDYGLDPK  | 43.16 |
 | AAALEAMK        | 23.54 |
-```
+
 
 ### 2.2.2 Modified peptides
 ```python
