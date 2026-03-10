@@ -1,3 +1,6 @@
+### Retention Time Prediction Proteolytic Peptides by Transformer Learning
+![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
+
 ## RT prediction package – usage guide
 
 This package refactors the original notebooks
