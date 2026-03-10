@@ -1,6 +1,11 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
+# Transformer Architecture
+![Figurer 1 - Transformer Architecture](https://github.com/user-attachments/assets/d84400e5-93d4-4506-9bb9-8ac414efd963)
+
+
+
 # 1. Installation
 ```python
 git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
