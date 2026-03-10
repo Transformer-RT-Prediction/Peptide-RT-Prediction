@@ -2,10 +2,10 @@
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
 # 1. Installation
-'''python
+```python
 git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
-'''
+```
 
 ## RT prediction package – usage guide
 
