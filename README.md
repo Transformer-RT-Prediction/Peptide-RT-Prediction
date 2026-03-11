@@ -51,7 +51,6 @@ Total 11 datasets including 3 LC conditions were utilized -
 | AAAEVNQDYGLDPK  | 43.16 |
 | AAALEAMK        | 23.54 |
 
-
 ### 2.2.2. Modified peptides
 | Sequence | Modifications | RT |
 |:---------|:--------------:|:---:|
@@ -60,6 +59,8 @@ Total 11 datasets including 3 LC conditions were utilized -
 | ILYSQCGDVMR | 1xCarbamidomethyl [C6] | 47.68 |
 | ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11] | 56.89 |
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
+
+Modifications: `Cys-carbamidomethylation`, 
 
 
 
