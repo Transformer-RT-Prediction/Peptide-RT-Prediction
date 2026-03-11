@@ -40,7 +40,7 @@ Total 11 datasets including 3 LC conditions were utilized -
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
 
 ## 2.2. Dataset Structure (Input files)
-Prepare the datasets of unmodified and modified peptides as the following formats -
+Datasets of unmodified and modified peptides were prepared as the following formats -
 ### 2.2.1. Unmodified peptides
 | Sequence        | RT    |
 |:-----------------|:-------:|
@@ -60,9 +60,9 @@ Prepare the datasets of unmodified and modified peptides as the following format
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
 
 #### Explanations -
-`ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates Cys residue on 6th position contains one carbamidomethyl modification.
+`ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates one carbamidomethyl modification on 6th postion of Cys residue.
 
-`ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates Cys residues on 7 and 11th positions contain carbamidomethyl modifications.
+`ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates two carbamidomethyl modifications on 7 and 11th positions of Cys residues.
 
 #### Types of modifications -
 1. Exp. HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
