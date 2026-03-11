@@ -1,7 +1,7 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
-[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow&logoColor=#FF6F00)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow&logoColor=#FF6F00)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/) [![Keras](https://img.shields.io/badge/Keras-3.11.3-D00000?logo=keras&logoColor=white)](https://keras.io/) [![SciPy](https://img.shields.io/badge/SciPy-1.16.1-8CAAE6?logo=scipy&logoColor=white)](https://scipy.org/) [![Pandas](https://img.shields.io/badge/Pandas-2.3.1-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/) [![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy&logoColor=white)](https://numpy.org/) [![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0)](https://seaborn.pydata.org/)
 
 # 1. Installation
 ```python
