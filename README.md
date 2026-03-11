@@ -3,13 +3,13 @@
 
 
 <p align="center">
-  [![Tensorflow](https://img.shields.io/badge/Tensorflow-v2.20.0-FF6F00?logo=tensorflow&style=for-the-badge)](https://www.tensorflow.org/) 
-  [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikitlearn&style=for-the-badge)](https://scikit-learn.org/) 
-  [![Keras](https://img.shields.io/badge/Keras-3.11.3-D00000?logo=keras&style=for-the-badge)](https://keras.io/) 
-  [![SciPy](https://img.shields.io/badge/SciPy-1.16.1-8CAAE6?logo=scipy&style=for-the-badge)](https://scipy.org/) 
-  [![Pandas](https://img.shields.io/badge/pandas-2.3.1-150458?logo=pandas&style=for-the-badge)](https://pandas.pydata.org/) 
-  [![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy&style=for-the-badge)](https://numpy.org/) 
-  [![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?logo=seaborn&style=for-the-badge)](https://seaborn.pydata.org/)
+[![Tensorflow](https://img.shields.io/badge/Tensorflow-v2.20.0-FF6F00?logo=tensorflow&style=for-the-badge)](https://www.tensorflow.org/) 
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikitlearn&style=for-the-badge)](https://scikit-learn.org/) 
+[![Keras](https://img.shields.io/badge/Keras-3.11.3-D00000?logo=keras&style=for-the-badge)](https://keras.io/) 
+[![SciPy](https://img.shields.io/badge/SciPy-1.16.1-8CAAE6?logo=scipy&style=for-the-badge)](https://scipy.org/) 
+[![Pandas](https://img.shields.io/badge/pandas-2.3.1-150458?logo=pandas&style=for-the-badge)](https://pandas.pydata.org/) 
+[![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy&style=for-the-badge)](https://numpy.org/) 
+[![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?logo=seaborn&style=for-the-badge)](https://seaborn.pydata.org/)
 </p>
 
 
