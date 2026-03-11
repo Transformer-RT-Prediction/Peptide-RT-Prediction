@@ -5,10 +5,11 @@
   [![Tensorflow](https://img.shields.io/badge/Tensorflow-v2.20.0-FF6F00?logo=tensorflow&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://www.tensorflow.org/)
   [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-ECD53F?logo=scikitlearn&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://scikit-learn.org/)
   [![Keras](https://img.shields.io/badge/Keras-v3.11.3-D00000?logo=keras&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://keras.io/)
-  [![SciPy](https://img.shields.io/badge/SciPy-v1.16.1-8CAAE6?logo=scipy&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://scipy.org/) 
-[![Pandas](https://img.shields.io/badge/pandas-v2.3.1-00AA45?logo=pandas&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://pandas.pydata.org/) 
-[![NumPy](https://img.shields.io/badge/NumPy-v2.2.6-897BFF?logo=numpy&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://numpy.org/) 
-[![Seaborn](https://img.shields.io/badge/Seaborn-v0.13.2-F1007E?logo=seaborn&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://seaborn.pydata.org/)
+  [![SciPy](https://img.shields.io/badge/SciPy-v1.16.1-8CAAE6?logo=scipy&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://scipy.org/)
+  [![Pandas](https://img.shields.io/badge/pandas-v2.3.1-00AA45?logo=pandas&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://pandas.pydata.org/)
+  [![NumPy](https://img.shields.io/badge/NumPy-v2.2.6-897BFF?logo=numpy&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://numpy.org/)
+  [![Seaborn](https://img.shields.io/badge/Seaborn-v0.13.2-F1007E?logo=seaborn&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://seaborn.pydata.org/)
+</p>
 
 # 1. Installation
 ```python
