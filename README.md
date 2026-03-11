@@ -60,7 +60,7 @@ Prepare the datasets of unmodified and modified peptides as the following format
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
 
 #### Explanations -
-`ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates Cys residue on 6th position contains one carbamidomethyl modification.
+`ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates Cys residue on 6th position contains one carbamidomethyl modification. </p>
 `ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates Cys residues on 7 and 11th positions contain carbamidomethyl modifications.
 
 
