@@ -14,9 +14,10 @@
 git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
 ```
+
 # 2. Datasets
 ## 2.1. LC types
-1. RPLC - `Exp. HeLa (unmod. and mod.)`; `DeepRT HeLa (unmod. and mod.)`; `DeepRT Yeast`; `DeepRT Atlantis Silica`; `DeepLC Xbridge`; `DeepLC Luna Silica`; `DeepLC Misc. (modified)`
+1. RPLC - `Exp. HeLa (unmod. and mod.)`; `DeepRT HeLa (unmod. and mod.)`; `DeepRT Yeast`; `DeepRT Atlantis Silica`; `DeepLC Xbridge`; `DeepLC Luna Silica`; `DeepLC Misc. (mod.)`
 2. HILIC - `DeepLC Luna HILIC`
 3. SCX - `DeepLC SCX`
 
@@ -62,6 +63,8 @@ Datasets of unmodified and modified peptides were prepared as the following form
 1. Exp. HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
 3. DeepLC Misc.: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
+
+# 3. Transformer Architecture
 
 
 
