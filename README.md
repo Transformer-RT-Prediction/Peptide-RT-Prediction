@@ -65,12 +65,10 @@ Prepare the datasets of unmodified and modified peptides as the following format
 `ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates Cys residues on 7 and 11th positions contain carbamidomethyl modifications.
 
 
-#### Modifications -
+#### Types of modifications -
 
 1. Exp. HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
-
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
-
 3. DeepLC Miscellaneous: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
 
 
