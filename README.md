@@ -18,14 +18,12 @@ cd Peptide-RT-Prediction
 ## 2.1. Different LC types
 
 Total 11 datasets including 3 LC conditions were utilized -
-  
-<p align="justify">
-1. RPLC - Exp. HeLa (unmod. and mod.); DeepRT HeLa (unmod. and mod.); DeepRT Yeast; DeepRT Atlantis Silica; DeepLC Xbridge; DeepLC Luna Silica; DeepLC Misc. (modified)
-</p>
-2. HILIC - DeepLC Luna HILIC
-</p>
-3. SCX - DeepLC SCX
-</p>
+
+1. RPLC - `Exp. HeLa (unmod. and mod.)`; `DeepRT HeLa (unmod. and mod.)`; `DeepRT Yeast`; `DeepRT Atlantis Silica`; `DeepLC Xbridge`; `DeepLC Luna Silica`; `DeepLC Misc. (modified)`
+
+2. HILIC - `DeepLC Luna HILIC`
+
+3. SCX - `DeepLC SCX`
 
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
@@ -62,7 +60,7 @@ Total 11 datasets including 3 LC conditions were utilized -
 
 #### Modifications -
 
-1. Experimental HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
+1. Exp. HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
 
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
 
