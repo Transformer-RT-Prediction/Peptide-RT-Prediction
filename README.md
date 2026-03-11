@@ -65,6 +65,7 @@ Datasets of unmodified and modified peptides were prepared as the following form
 3. DeepLC Misc.: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
 
 # 3. Transformer Architecture
+The main architecture is composed of 4 major stages -
 
 
 
