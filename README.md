@@ -70,12 +70,14 @@ Datasets of unmodified and modified peptides were prepared as the following form
 
 # 3. Transformer Architecture
 The main architecture is composed of 4 major stages -
-1. Peptide sequences and PTMs preprocessing
-   
-3. Conformer-lite econding
-4. Hybrid pooling
-5. Regression head
-
+1. Preprocessing of Peptide sequences and PTMs
+  
+2. Conformer-lite econding
+  
+3. Hybrid pooling
+  
+4. Regression head
+  
 
 
 
