@@ -60,9 +60,8 @@ Datasets of unmodified and modified peptides were prepared as the following form
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
 
 #### Explanations -
-`ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates one carbamidomethyl modification on 6th postion of Cys residue.
-
-`ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates two carbamidomethyl modifications on 7 and 11th positions of Cys residues.
+1. `ILYSQCGDVMR | 1xCarbamidomethyl [C6]` indicates one carbamidomethyl modification on 6th postion of Cys residue.
+2. `ISNASCTTNCLAPLAK | 2xCarbamidomethyl [C7; C11]`indicates two carbamidomethyl modifications on 7 and 11th positions of Cys residues.
 
 #### Types of modifications -
 1. Exp. HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
