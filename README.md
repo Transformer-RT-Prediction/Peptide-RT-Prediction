@@ -1,4 +1,4 @@
-# <p align="justify"> Retention Time (RT) Prediction of Proteolytic Peptides by Transformer Learning
+# <p align="center"> Retention Time (RT) Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
 [![Tensorflow](https://img.shields.io/badge/Tensorflow-v2.20.0-FF6F00?logo=tensorflow&style=for-the-badge&logoSize=amd&logoColor=FDEE21)](https://www.tensorflow.org/)
