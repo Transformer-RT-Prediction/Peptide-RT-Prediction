@@ -40,6 +40,7 @@ Total 11 datasets including 3 LC conditions were utilized -
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
 
 ## 2.2. Dataset Structure (Input files)
+Prepare the datasets of unmodified and modified peptides as the following formats -
 ### 2.2.1. Unmodified peptides
 | Sequence        | RT    |
 |:-----------------|:-------:|
