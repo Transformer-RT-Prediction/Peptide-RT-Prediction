@@ -25,8 +25,6 @@ cd Peptide-RT-Prediction
 2. HILIC - `DeepLC Luna HILIC`
 3. SCX - `DeepLC SCX`
 
-<div align="center">
-  
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
 | Exp. HeLa | 4,213 | 6–33 |
@@ -40,8 +38,6 @@ cd Peptide-RT-Prediction
 | DeepLC Luna HILIC | 36,080 | 7–51 |
 | DeepLC Luna Silica | 36,823 | 7–48 |
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
-
-</div>
 
 ## 2.2. Dataset Structure (Input files)
 Datasets of unmodified and modified peptides were prepared as the following formats -
