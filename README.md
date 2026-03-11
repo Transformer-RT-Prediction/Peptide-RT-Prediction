@@ -1,7 +1,7 @@
 # Retention Time Prediction of Proteolytic Peptides by Transformer Learning
 ![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
 
-[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikit-learn&logoColor=F7931E)](https://scikit-learn.org/) [![Keras](https://img.shields.io/badge/Keras-3.11.3-D00000?logo=keras&logoColor=D00000)](https://keras.io/) [![SciPy](https://img.shields.io/badge/SciPy-1.16.1-8CAAE6?logo=scipy&logoColor=8CAAE6)](https://scipy.org/) [![Pandas](https://img.shields.io/badge/pandas-2.3.1-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/) [![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy&logoColor=white)](https://numpy.org/) [![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?logo=seaborn&logoColor=white)](https://seaborn.pydata.org/)
+[![tensorflow](https://img.shields.io/badge/tensorflow-v2.20.0-blue?logo=tensorflow)](https://www.tensorflow.org/) [![scikit-learn](https://img.shields.io/badge/scikit--learn-v1.7.1-F7931E?logo=scikit-learn)](https://scikit-learn.org/) [![Keras](https://img.shields.io/badge/Keras-3.11.3-D00000?logo=keras)](https://keras.io/) [![SciPy](https://img.shields.io/badge/SciPy-1.16.1-8CAAE6?logo=scipy)](https://scipy.org/) [![Pandas](https://img.shields.io/badge/pandas-2.3.1-150458?logo=pandas)](https://pandas.pydata.org/) [![NumPy](https://img.shields.io/badge/NumPy-2.2.6-013243?logo=numpy)](https://numpy.org/) [![Seaborn](https://img.shields.io/badge/Seaborn-0.13.2-4C72B0?logo=seaborn)](https://seaborn.pydata.org/)
 
 # 1. Installation
 ```python
