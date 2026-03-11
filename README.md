@@ -15,14 +15,9 @@ git clone https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction
 cd Peptide-RT-Prediction
 ```
 # 2. Datasets
-## 2.1. Different LC types
-
-Total 11 datasets including 3 LC conditions were utilized -
-
+## 2.1. LC types
 1. RPLC - `Exp. HeLa (unmod. and mod.)`; `DeepRT HeLa (unmod. and mod.)`; `DeepRT Yeast`; `DeepRT Atlantis Silica`; `DeepLC Xbridge`; `DeepLC Luna Silica`; `DeepLC Misc. (modified)`
-
 2. HILIC - `DeepLC Luna HILIC`
-
 3. SCX - `DeepLC SCX`
 
 | Dataset | Number of Peptides | Peptide Seq Length |
