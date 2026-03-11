@@ -61,13 +61,14 @@ Total 11 datasets including 3 LC conditions were utilized -
 | IINDNATYCR | 1xCarbamidomethyl [C9] | 25.69 |
 
 #### Modifications -
-</p>
+
 1. Experimental HeLa: `Cys-Carbamidomethylation`, `Lys, Ser-Oxidation`, `Met-N-Term Acetylation`
-</p>
+
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
-</p>
+
 3. DeepLC Miscellaneous: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
-</p>
+
+
 
 
 
