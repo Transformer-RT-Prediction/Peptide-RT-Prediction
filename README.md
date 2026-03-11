@@ -66,7 +66,7 @@ Total 11 datasets including 3 LC conditions were utilized -
 
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
 
-3. DeepLC Miscellaneous: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
+3. DeepLC Miscellaneous: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
 
 
 
