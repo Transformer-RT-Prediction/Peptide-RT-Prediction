@@ -110,7 +110,7 @@ The main architecture is composed of 4 major stages -
         self.conv_norm = tf.keras.layers.LayerNormalization(epsilon=1e-6)
         self.conv = ConvModule(d_model, kernel_size=conv_k, dropout=dropout)
 
-        def call(self, x, attn_mask, training=None):
+    def call(self, x, attn_mask, training=None):
         # Macaron FFN1 (pre-norm inside GEGLUFFN) with 0.5 residual
         x = x + 0.5 * self.ffn1(x, training=training)
 
