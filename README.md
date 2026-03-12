@@ -70,9 +70,11 @@ Datasets of unmodified and modified peptides were prepared as the following form
 
 # 3. Transformer Architecture
 The main architecture is composed of 4 major stages -
-1. Preprocessing of peptide sequences and PTMs - In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module.
+1. Preprocessing of peptide sequences and PTMs -
 
-   The base alphabets of amino acids can be defined as
+   [Preprocessing.tif](https://github.com/user-attachments/files/25922199/Preprocessing.tif)
+
+   In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module. The base alphabets of amino acids can be defined as
    ```python
    BASE_AA = {A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y}
    ```
