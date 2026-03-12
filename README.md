@@ -83,7 +83,56 @@ The main architecture is composed of 4 major stages -
    DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
    ```
 3. Conformer-lite econding
-  
+
+   ```python
+   class EncoderBlock(tf.keras.layers.Layer):
+    """
+    Conformer-style macaron block:
+      0.5*FFN1 -> MHSA -> ConvModule -> 0.5*FFN2
+    """
+    def __init__(self, d_model, n_heads, d_ff, dropout, conv_k):
+        super().__init__()
+
+        # Macaron FFNs (each has its own LayerNorm inside GEGLUFFN)
+        self.ffn1 = GEGLUFFN(d_ff=d_ff, d_model=d_model, dropout=dropout)
+        self.ffn2 = GEGLUFFN(d_ff=d_ff, d_model=d_model, dropout=dropout)
+
+        # MHSA
+        self.norm_attn = tf.keras.layers.LayerNormalization(epsilon=1e-6)
+        self.mha = tf.keras.layers.MultiHeadAttention(
+            num_heads=n_heads,
+            key_dim=d_model // n_heads,
+            dropout=dropout,
+        )
+        self.do_attn = tf.keras.layers.Dropout(dropout)
+
+        # Conv module
+        self.conv_norm = tf.keras.layers.LayerNormalization(epsilon=1e-6)
+        self.conv = ConvModule(d_model, kernel_size=conv_k, dropout=dropout)
+
+        def call(self, x, attn_mask, training=None):
+        # Macaron FFN1 (pre-norm inside GEGLUFFN) with 0.5 residual
+        x = x + 0.5 * self.ffn1(x, training=training)
+
+        # MHSA (pre-norm)
+        y = self.mha(
+            self.norm_attn(x),
+            self.norm_attn(x),
+            attention_mask=attn_mask,
+            training=training,
+        )
+        x = x + self.do_attn(y, training=training)
+
+        # Conv module (pre-norm)
+        y = self.conv(self.conv_norm(x), training=training)
+        x = x + y
+
+        # Macaron FFN2 (pre-norm inside GEGLUFFN) with 0.5 residual
+        x = x + 0.5 * self.ffn2(x, training=training)
+
+        return x
+   ```
+   
 4. Hybrid pooling
   
 5. Regression head
