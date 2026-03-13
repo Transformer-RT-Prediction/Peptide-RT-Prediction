@@ -70,7 +70,7 @@ Datasets of unmodified and modified peptides were prepared as the following form
 
 # 3. Transformer Architecture
 The main architecture is composed of 4 major stages -
-1. Preprocessing of peptide sequences and PTMs -
+## 1. Preprocessing of peptide sequences and PTMs -
 
    ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
 
@@ -83,8 +83,11 @@ The main architecture is composed of 4 major stages -
    ```python
    DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
    ```
-2. Conformer-lite econding
+## 2. Conformer-lite econding
 
+   ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
+
+   
    ```python
    class EncoderBlock(tf.keras.layers.Layer):
     """
@@ -134,13 +137,13 @@ The main architecture is composed of 4 major stages -
         return x
    ```
    
-3. Hybrid pooling mechanism
+## 3. Hybrid pooling mechanism
 
    ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
 
 
    
-4. Regression head
+## 4. Regression head
 
    ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
 
