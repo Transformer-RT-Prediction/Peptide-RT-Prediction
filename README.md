@@ -72,7 +72,8 @@ Datasets of unmodified and modified peptides were prepared as the following form
 The main architecture is composed of 4 major stages -
 1. Preprocessing of peptide sequences and PTMs -
 
-   ![Preprocessing](https://github.com/user-attachments/assets/6b67796f-174d-4330-ac18-4141e852b5d2)
+   ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
+
    
    In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module. The base alphabets of amino acids can be defined as
    ```python
@@ -82,7 +83,7 @@ The main architecture is composed of 4 major stages -
    ```python
    DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
    ```
-3. Conformer-lite econding
+2. Conformer-lite econding
 
    ```python
    class EncoderBlock(tf.keras.layers.Layer):
@@ -133,10 +134,16 @@ The main architecture is composed of 4 major stages -
         return x
    ```
    
-4. Hybrid pooling
-  
-5. Regression head
-  
+3. Hybrid pooling mechanism
+
+   ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
+
+
+   
+4. Regression head
+
+   ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
+
 
 
 
