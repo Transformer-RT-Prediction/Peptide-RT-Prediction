@@ -68,88 +68,6 @@ Datasets of unmodified and modified peptides were prepared as the following form
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
 3. DeepLC Misc.: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
 
-# 3. Transformer Architecture
-The main architecture is composed of 4 major stages -
-## 1. Preprocessing of peptide sequences and PTMs -
-
-   ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
-
-   
-   In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module. The base alphabets of amino acids can be defined as
-   ```python
-   BASE_AA = {A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y}
-   ```
-   For PTM-containing peptides, numeric, lowercase, uppercase and special characters were utilized along with the base alphabets.
-   ```python
-   DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
-   ```
-## 2. Conformer-lite econding
-
-   ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
-
-   
-   ```python
-   class EncoderBlock(tf.keras.layers.Layer):
-    """
-    Conformer-style macaron block:
-      0.5*FFN1 -> MHSA -> ConvModule -> 0.5*FFN2
-    """
-    def __init__(self, d_model, n_heads, d_ff, dropout, conv_k):
-        super().__init__()
-
-        # Macaron FFNs (each has its own LayerNorm inside GEGLUFFN)
-        self.ffn1 = GEGLUFFN(d_ff=d_ff, d_model=d_model, dropout=dropout)
-        self.ffn2 = GEGLUFFN(d_ff=d_ff, d_model=d_model, dropout=dropout)
-
-        # MHSA
-        self.norm_attn = tf.keras.layers.LayerNormalization(epsilon=1e-6)
-        self.mha = tf.keras.layers.MultiHeadAttention(
-            num_heads=n_heads,
-            key_dim=d_model // n_heads,
-            dropout=dropout,
-        )
-        self.do_attn = tf.keras.layers.Dropout(dropout)
-
-        # Conv module
-        self.conv_norm = tf.keras.layers.LayerNormalization(epsilon=1e-6)
-        self.conv = ConvModule(d_model, kernel_size=conv_k, dropout=dropout)
-
-    def call(self, x, attn_mask, training=None):
-        # Macaron FFN1 (pre-norm inside GEGLUFFN) with 0.5 residual
-        x = x + 0.5 * self.ffn1(x, training=training)
-
-        # MHSA (pre-norm)
-        y = self.mha(
-            self.norm_attn(x),
-            self.norm_attn(x),
-            attention_mask=attn_mask,
-            training=training,
-        )
-        x = x + self.do_attn(y, training=training)
-
-        # Conv module (pre-norm)
-        y = self.conv(self.conv_norm(x), training=training)
-        x = x + y
-
-        # Macaron FFN2 (pre-norm inside GEGLUFFN) with 0.5 residual
-        x = x + 0.5 * self.ffn2(x, training=training)
-
-        return x
-   ```
-   
-## 3. Hybrid pooling mechanism
-
-   ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
-
-
-   
-## 4. Regression head
-
-   ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
-
-
-
-
 ## RT prediction package – usage guide
 
 This package refactors the original notebooks
@@ -308,37 +226,7 @@ You can also adjust the hyperparameter search grid by modifying
 `cfg.hp_configs` (a list of dicts with keys
 `name, D_MODEL, N_LAYERS, N_HEADS, D_FF, DROPOUT, BASE_LR`).
 
-### 5. Advanced: direct access to model and tokenizer
-
-If you need to use the model and tokenizer outside the full pipeline:
-
-```python
-from rt_pred.tokenizer import infer_alphabet, build_tokenizer, encode_sequence
-from rt_pred.model import build_model_from_hp
-from rt_pred.config import ExperimentConfig, DEFAULT_HP_CONFIGS
-
-seqs = ["PEPTIDE", "ACDMK"]
-alphabet = infer_alphabet(seqs)
-tok = build_tokenizer(alphabet)
-max_len = max(len(s) for s in seqs)
-X = np.stack([encode_sequence(s, tok, max_len) for s in seqs])
-
-cfg = ExperimentConfig(root=Path("."), files=[])
-hp = DEFAULT_HP_CONFIGS[0]
-steps_per_epoch = 1
-
-model = build_model_from_hp(
-    hp,
-    max_len_with_cls=max_len + 1,
-    vocab_size=max(tok.values()) + 1,
-    steps_per_epoch=steps_per_epoch,
-    epochs=cfg.epochs,
-    cfg=cfg,
-)
-preds = model.predict(X)
-```
-
-### 6. Where outputs are saved
+### 5. Where outputs are saved
 
 All experiment outputs are written into the directory specified
 by `cfg.root` (or the `root` argument passed to the `main` functions):
@@ -346,6 +234,37 @@ by `cfg.root` (or the `root` argument passed to the `main` functions):
 - `*_cv_metrics.csv` – per‑fold cross‑validation metrics
 - `*_test_predictions_cv.csv` – per‑fold CV predictions
 - `*_train_history.csv` – training and validation loss per epoch
+
+# 3. Transformer Architecture
+The main architecture is composed of 4 major stages -
+## 1. Preprocessing of peptide sequences and PTMs -
+
+   ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
+
+   
+   In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module. The base alphabets of amino acids can be defined as
+   ```python
+   BASE_AA = {A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y}
+   ```
+   For PTM-containing peptides, numeric, lowercase, uppercase and special characters were utilized along with the base alphabets.
+   ```python
+   DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
+   ```
+## 2. Conformer-lite econding
+
+   ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
+   
+      
+## 3. Hybrid pooling mechanism
+
+   ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
+
+
+   
+## 4. Regression head
+
+   ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
+
 - `*_train_predictions.csv` – predictions on the training split
 - `*_validation_predictions.csv` – predictions on the held‑out split
 - `rt_transformer_metrics.csv` – summary metrics per file
