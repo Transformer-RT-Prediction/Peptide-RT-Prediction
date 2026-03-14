@@ -68,13 +68,9 @@ Datasets of unmodified and modified peptides were prepared as the following form
 2. DeepRT HeLa: `Lys, Tyr-Oxidation`, `Met, Thr-Phospho`
 3. DeepLC Misc.: `Lys, Tyr-Oxidation`, `Tyr-Phospho`, `Arg-Acetylation`, `Met-Propionyl`, `Pro-Succinyl`, `Lys-Biotin`, `Tyr-Butyryl`, `Met-Crotonyl`, `Pro-Deamidated`, `Met-Formyl`,`Lys-GG (Glycine-Glycine)`,`Met-Malonyl`, `Tyr-Methyl`, `Met-Nitro`
 
-## RT prediction package – usage guide
+# 3. Usage
 
-This package refactors the original notebooks
-`rt_pred_exp_hela1 (2).ipynb` and `rt_pred_exp_mod_hela1.ipynb`
-into a reusable, folder‑based Python package.
-
-### 1. Package layout (high level)
+## 3.1. Package layout
 
 - `rt_pred/config/` – experiment configuration
   - `ExperimentConfig`, `hela_unmodified_config`, `hela_modified_config`
@@ -97,7 +93,7 @@ into a reusable, folder‑based Python package.
   - `hela_unmodified.py`
   - `hela_modified.py`
 
-All public functions are available via the package:
+All functions are available via the package:
 
 ```python
 from rt_pred.config import hela_unmodified_config, hela_modified_config
@@ -106,12 +102,12 @@ from rt_pred.training import run_experiment
 from rt_pred.model import build_model_from_hp, set_seed
 ```
 
-### 2. Running the Hela experiments from Python
+## 3.2. Running the code
 
 Make sure your working directory is the project root
 (`c:\Users\Mahin\Downloads\Transformer RT` on Windows).
 
-#### 2.1 Unmodified Hela experiment
+### 2.1 Unmodified Hela experiment
 
 Assume your data file is at:
 
@@ -234,6 +230,9 @@ by `cfg.root` (or the `root` argument passed to the `main` functions):
 - `*_cv_metrics.csv` – per‑fold cross‑validation metrics
 - `*_test_predictions_cv.csv` – per‑fold CV predictions
 - `*_train_history.csv` – training and validation loss per epoch
+- `*_train_predictions.csv` – predictions on the training split
+- `*_validation_predictions.csv` – predictions on the held‑out split
+- `rt_transformer_metrics.csv` – summary metrics per file
 
 # 3. Transformer Architecture
 The main architecture is composed of 4 major stages -
@@ -265,7 +264,5 @@ The main architecture is composed of 4 major stages -
 
    ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
 
-- `*_train_predictions.csv` – predictions on the training split
-- `*_validation_predictions.csv` – predictions on the held‑out split
-- `rt_transformer_metrics.csv` – summary metrics per file
+
 
