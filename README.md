@@ -100,15 +100,13 @@ Core model components and utilities
   - `utils.py`
     – `set_seed` - ensure reproducible experiments
 
-
 `rt_pred/metrics/` – Evaluation and RT unit helpers
 
 Metrics and helper functions for retention time (RT) evaluation
-  - `pearson_r`,
-  - `p95_width`,
-  - `residual_ci95`,
+  - `pearson_r`
+  - `p95_width`
+  - `residual_ci95`
   - `normalize_rt_units`
-
 
 - `rt_pred/training/` – End‑to‑End Training & Evaluation
 
