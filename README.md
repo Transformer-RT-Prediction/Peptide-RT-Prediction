@@ -84,40 +84,59 @@ Defines configuration objects and default experiment settings
 `rt_pred/tokenizer/` – Peptide Tokenization Utilities
 
 Functions for building tokenizers and encoding peptide sequences
-  - `infer_alphabet`, `build_tokenizer`, `encode_sequence`
+  - `infer_alphabet`,
+  - `build_tokenizer`,
+  - `encode_sequence`
 
-`rt_pred/model/` – model architecture
+
+`rt_pred/model/` – Model Architecture
 
 Core model components and utilities
-  - `schedules.py` – `WarmupCosine`
+  - `schedules.py`
+    – `WarmupCosine` - learning rate scheduler
   - `layers.py` – encoder and pooling layers
-  - `builder.py` – `build_model_from_hp`
-  - `utils.py` – `set_seed`
+  - `builder.py`
+    – `build_model_from_hp` - construct model from hyperparameters
+  - `utils.py`
+    – `set_seed` - ensure reproducible experiments
+
 
 `rt_pred/metrics/` – Evaluation and RT unit helpers
 
 Metrics and helper functions for retention time (RT) evaluation
-  - `pearson_r`, `p95_width`, `residual_ci95`, `normalize_rt_units`
+  - `pearson_r`,
+  - `p95_width`,
+  - `residual_ci95`,
+  - `normalize_rt_units`
+
 
 - `rt_pred/training/` – End‑to‑End Training & Evaluation
 
 Training pipelines and evaluation workflows
-  - `make_ds`, `tune_hyperparams`, `run_cross_validation`,
-    `train_one_file`, `run_experiment`
+  - `make_ds`,
+  - `tune_hyperparams`,
+  - `run_cross_validation`,
+  - `train_one_file`,
+  - `run_experiment`
 
-- `rt_pred/data/` – data loading & modification handling
+
+- `rt_pred/data/` – Data Loading and Modification Handling
 
 Utilities for loading datasets and handling peptide modifications
-  - `unmodified.py` – `load_tsv_unmodified`
-  - `modified.py` – `load_tsv_modified` and helpers
+  - `unmodified.py`
+    – `load_tsv_unmodified`
+  - `modified.py`
+    – `load_tsv_modified`
+    - modification parsing helpers
 
-- `rt_pred/experiments/` – ready‑to‑run experiment entry points
+
+- `rt_pred/experiments/` – Ready-to-Run Experiment Entry Points
 
 Scripts for running predefined experiments
   - `hela_unmodified.py`
   - `hela_modified.py`
 
-All functions are available via the package:
+All major functions can be imported directly from the package -
 
 ```python
 from rt_pred.config import hela_unmodified_config, hela_modified_config
