@@ -101,7 +101,6 @@ Core model components and utilities
     – `set_seed` - ensure reproducible experiments
 
 `rt_pred/metrics/` – Evaluation and RT unit helpers
-
 Metrics and helper functions for retention time (RT) evaluation
 
   - `pearson_r`,
