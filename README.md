@@ -94,8 +94,7 @@ Functions for building tokenizers and encoding peptide sequences
 Core model components and utilities
   - `schedules.py`
     - `WarmupCosine` - learning rate scheduler
-  
-  - `layers.py` – encoder and pooling layers
+    - `layers.py` – encoder and pooling layers
   
   - `builder.py`
     - `build_model_from_hp` - construct model from hyperparameters
