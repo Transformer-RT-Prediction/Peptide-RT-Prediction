@@ -101,14 +101,14 @@ Core model components and utilities
     – `set_seed` - ensure reproducible experiments
 
 `rt_pred/metrics/` – Evaluation and RT unit helpers
-Metrics and helper functions for retention time (RT) evaluation
 
+Metrics and helper functions for retention time (RT) evaluation
   - `pearson_r`,
   - `p95_width`,
-  - `residual_ci95`
+  - `residual_ci95`,
   - `normalize_rt_units`
- 
-- `rt_pred/training/` – End‑to‑End Training & Evaluation
+
+ - `rt_pred/training/` – End‑to‑End Training & Evaluation
 
 Training pipelines and evaluation workflows
   - `make_ds`
@@ -116,7 +116,6 @@ Training pipelines and evaluation workflows
   - `run_cross_validation`
   - `train_one_file`
   - `run_experiment`
-
 
 - `rt_pred/data/` – Data Loading and Modification Handling
 
@@ -126,7 +125,6 @@ Utilities for loading datasets and handling peptide modifications
   - `modified.py`
     – `load_tsv_modified`
     - modification parsing helpers
-
 
 - `rt_pred/experiments/` – Ready-to-Run Experiment Entry Points
 
