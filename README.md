@@ -151,7 +151,7 @@ from rt_pred.model import build_model_from_hp, set_seed
 
 Make sure your working directory is the project root (e.g. `c:\Users\Mahin\Downloads\Transformer RT`).
 
-### 3.2.1. Unmodified Hela experiment
+### 3.2.1. Unmodified sequences
 
 Assume your unmodified dataset is located in the following directory -
 
@@ -174,7 +174,7 @@ Outputs:
 - Train the final model
 - Save evaluation metrics and predictions as CSV files in `root` (here: `.`).
 
-### 3.2.2. Modified Hela experiment
+### 3.2.2. Modified sequences
 
 Assume your modified dataset is located in this dirctory -
 
