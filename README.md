@@ -194,7 +194,7 @@ This will:
 - Train and evaluate the same model architecture as used in the unmodified dataset
 - Save all CSV outputs into `root`.
 
-# 4. Using from jupyter notebooks
+## 3.3. Using from jupyter notebooks
 
 You can run the code directly from jupyter notebook located in the project root -
 
@@ -221,7 +221,7 @@ The code expects the following files in the specified `root` directory -
 - `root / "hela_unmodified.txt"` for the unmodified dataset
 - `root / "mod_hela_exp.csv"` for the modified dataset
 
-# 5. Code customization and configuration
+## 3.4. Code customization and configuration
 
 You can define your own configuration and run the generic training pipeline directly
 
@@ -265,7 +265,7 @@ You can modify the hyperparameter search grid by updating `cfg.hp_configs`
 This attribute is a list of dictionaries with the following keys -
 `name, D_MODEL, N_LAYERS, N_HEADS, D_FF, DROPOUT, BASE_LR`
 
-# 6. Output Files
+# 4. Output Files
 
 The outputs are saved into the directory specified by `cfg.root` (or by the `root` argument passed to the `main` functions)
 
@@ -277,9 +277,9 @@ The following files are generated -
 - `*_validation_predictions.csv` – predictions on the validation split
 - `rt_transformer_metrics.csv` – summary metrics for each dataset
 
-# 7. Transformer Architecture
+# 5. Transformer Architecture
 The main architecture is composed of 4 major stages -
-## 1. Preprocessing of peptide sequences and PTMs -
+## 5.1. Preprocessing of peptide sequences and PTMs -
 
    ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
 
@@ -292,18 +292,18 @@ The main architecture is composed of 4 major stages -
    ```python
    DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
    ```
-## 2. Conformer-lite econding
+## 5.2. Conformer-lite econding
 
    ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
    
       
-## 3. Hybrid pooling mechanism
+## 5.3. Hybrid pooling mechanism
 
    ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
 
 
    
-## 4. Regression head
+## 5.4. Regression head
 
    ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
 
