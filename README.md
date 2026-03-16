@@ -103,11 +103,11 @@ Core model components and utilities
 `rt_pred/metrics/` – Evaluation and RT unit helpers
 
 Metrics and helper functions for retention time (RT) evaluation
-  - `pearson_r`
-  - `p95_width`
+  - `pearson_r`,
+  - `p95_width`,
   - `residual_ci95`
   - `normalize_rt_units`
-
+ 
 - `rt_pred/training/` – End‑to‑End Training & Evaluation
 
 Training pipelines and evaluation workflows
