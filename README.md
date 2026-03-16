@@ -196,6 +196,8 @@ This will:
 - Train and evaluate the same model architecture as used in the unmodified dataset
 - Save all CSV outputs into `root`.
 
+If you want to run (e.g. visual studio code) the complete script without any installation, see [here](https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction/tree/main/scripts)
+
 ## 3.3. Using from jupyter notebooks
 
 You can run the code directly from jupyter notebook located in the project root -
