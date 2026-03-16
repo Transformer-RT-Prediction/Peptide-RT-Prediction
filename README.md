@@ -39,7 +39,7 @@ cd Peptide-RT-Prediction
 | DeepLC Luna Silica | 36,823 | 7–48 |
 | DeepLC Misc. (modified) | 14,557 | 7–45 |
 
-See the datasets here Transformer-RT-Prediction/Peptide-RT-Prediction/tree/main/datasets
+See the [datasets](https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction/tree/main/datasets) here
 
 ## 2.2. Dataset Structure (Input files)
 Datasets of unmodified and modified peptides were prepared as the following formats -
