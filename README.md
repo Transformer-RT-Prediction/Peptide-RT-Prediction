@@ -287,26 +287,23 @@ The main architecture is composed of 4 major stages -
 
    ![Preprocessing](https://github.com/user-attachments/assets/248eeae2-03c5-4910-bfbd-aef0150abc5c)
 
+   <p align="justify"> Input representation of AA residues and PTMs. Peptide sequences were encoded into numerical tokens using a predefined alphabet selected by an alphabet decision module. Unmodified peptides used the 20 canonical amino acids, while PTM-containing peptides used a generalized modification-aware alphabet to represent modified residues without overlapping with canonical amino acid encoding. A [CLS] token was prepended for global sequence representation, and sequences were padded or truncated to a fixed length L. A padding mask was then applied to ignore padded positions during self-attention and pooling. Each token was mapped to a trainable embedding and combined with a learned positional embedding, followed by layer normalization to stabilize training.
+
+   $$
+   h_i^{(0)} = \operatorname{LayerNorm}\left(E_{\text{tok}}[x_i] + E_{\text{pos}}[i]\right)
+   $$
    
-   In this step, the input peptide sequences are encoded to predefined alphabets by an alphabet decision module. The base alphabets of amino acids can be defined as
-   ```python
-   BASE_AA = {A, C, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, Y}
-   ```
-   For PTM-containing peptides, numeric, lowercase, uppercase and special characters were utilized along with the base alphabets.
-   ```python
-   DP_ALPHABET = "ACDEFGHIKLMNPQRSTVWY1234*"
-   ```
 ## 5.2. Conformer-lite econding
 
    ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
 
-   ### <p align="justify"> Conformer-Lite Encoder. The backbone of the proposed model consists of N stacked Conformer-Lite blocks that capture both global dependencies and local sequence motifs through residual connections. Each block includes a half-step Macaron feed-forward layer (FFN1), multi-head self-attention (MHSA), a convolution module, and a second half-step Macaron feed-forward layer (FFN2). FFN1 uses GEGLU activation to learn residue-specific features before global interaction. MHSA models long-range dependencies among peptide residues, while the convolution module captures local motifs and short-range patterns using depth-wise convolution, GLU, and SiLU activation. Finally, the second GEGLU-based FFN integrates attention and convolution features to further refine the representation.
+   <p align="justify"> Conformer-Lite Encoder: The backbone of the proposed model consists of N stacked Conformer-Lite blocks that capture both global dependencies and local sequence motifs through residual connections. Each block includes a half-step Macaron feed-forward layer (FFN1), multi-head self-attention (MHSA), a convolution module, and a second half-step Macaron feed-forward layer (FFN2). FFN1 uses GEGLU activation to learn residue-specific features before global interaction. MHSA models long-range dependencies among peptide residues, while the convolution module captures local motifs and short-range patterns using depth-wise convolution, GLU, and SiLU activation. Finally, the second GEGLU-based FFN integrates attention and convolution features to further refine the representation.
       
 ## 5.3. Hybrid pooling mechanism
 
    ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
 
-   Hybrid pooling concatenates the outputs of the four Conformer-Lite encoder sub-steps, capturing global context, residue-level statistics, and key residue contributions for accurate RT prediction. 
+   <p align="justify"> Hybrid pooling concatenates the outputs of the four Conformer-Lite encoder sub-steps, capturing global context, residue-level statistics, and key residue contributions for accurate RT prediction. 
    The final macaron-style Conformer block is defined as -
 
    $$
@@ -317,7 +314,7 @@ The main architecture is composed of 4 major stages -
 
    ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
 
-   The pooled vector is passed through a regression head to predict normalized RT values. These are then converted back to RT using min–max de-normalization.
+   <p align="justify"> The pooled vector is passed through a regression head to predict normalized RT values. These are then converted back to RT using min–max de-normalization.
    
    $$
    \text{Predicted RT} = \text{Predicted RT}_{\text{norm}} \times (RT_{\max} - RT_{\min}) + RT_{\min}
