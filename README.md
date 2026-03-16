@@ -290,7 +290,7 @@ The main architecture is composed of 4 major stages -
    <p align="justify"> Input representation of AA residues and PTMs. Peptide sequences were encoded into numerical tokens using a predefined alphabet selected by an alphabet decision module. Unmodified peptides used the 20 canonical amino acids, while PTM-containing peptides used a generalized modification-aware alphabet to represent modified residues without overlapping with canonical amino acid encoding. A [CLS] token was prepended for global sequence representation, and sequences were padded or truncated to a fixed length L. A padding mask was then applied to ignore padded positions during self-attention and pooling. Each token was mapped to a trainable embedding and combined with a learned positional embedding, followed by layer normalization to stabilize training.
 
    $$
-   h_i^{(0)} = \operatorname{LayerNorm}\left(E_{\text{tok}}[x_i] + E_{\text{pos}}[i]\right)
+   h_i^{(0)} = \mathrm{LayerNorm}\big(E_{\mathrm{tok}}[x_i] + E_{\mathrm{pos}}[i]\big)
    $$
    
 ## 5.2. Conformer-lite econding
