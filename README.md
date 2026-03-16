@@ -312,7 +312,8 @@ The main architecture is composed of 4 major stages -
    ![Regression Head](https://github.com/user-attachments/assets/8bf77fd3-cdac-4943-9540-bb8a19ec1dca)
 
    The pooled vector is passed through a regression head to predict normalized RT values. These are then converted back to RT using min–max de-normalization.
+   
    $$
-   Predicted\ RT = Predicted\ RT_{norm} \times (RT_{max} - RT_{min}) + RT_{min}
+   \text{Predicted RT} = \text{Predicted RT}_{\text{norm}} \times (RT_{\max} - RT_{\min}) + RT_{\min}
    $$
 
