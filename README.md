@@ -71,25 +71,49 @@ Datasets of unmodified and modified peptides were prepared as the following form
 # 3. Usage
 
 ## 3.1. Package layout
+The project is organized into the following modules -
 
-- `rt_pred/config/` – experiment configuration
-  - `ExperimentConfig`, `hela_unmodified_config`, `hela_modified_config`
-- `rt_pred/tokenizer/` – peptide tokenization utilities
+`rt_pred/config/` – Experiment Configuration
+
+Defines configuration objects and default experiment settings
+  - `ExperimentConfig`,
+  - `hela_unmodified_config`,
+  - `hela_modified_config`
+
+
+`rt_pred/tokenizer/` – Peptide Tokenization Utilities
+
+Functions for building tokenizers and encoding peptide sequences
   - `infer_alphabet`, `build_tokenizer`, `encode_sequence`
-- `rt_pred/model/` – model architecture
+
+`rt_pred/model/` – model architecture
+
+Core model components and utilities
   - `schedules.py` – `WarmupCosine`
   - `layers.py` – encoder and pooling layers
   - `builder.py` – `build_model_from_hp`
   - `utils.py` – `set_seed`
-- `rt_pred/metrics/` – evaluation and RT unit helpers
+
+`rt_pred/metrics/` – Evaluation and RT unit helpers
+
+Metrics and helper functions for retention time (RT) evaluation
   - `pearson_r`, `p95_width`, `residual_ci95`, `normalize_rt_units`
-- `rt_pred/training/` – end‑to‑end training & evaluation
+
+- `rt_pred/training/` – End‑to‑End Training & Evaluation
+
+Training pipelines and evaluation workflows
   - `make_ds`, `tune_hyperparams`, `run_cross_validation`,
     `train_one_file`, `run_experiment`
+
 - `rt_pred/data/` – data loading & modification handling
+
+Utilities for loading datasets and handling peptide modifications
   - `unmodified.py` – `load_tsv_unmodified`
   - `modified.py` – `load_tsv_modified` and helpers
+
 - `rt_pred/experiments/` – ready‑to‑run experiment entry points
+
+Scripts for running predefined experiments
   - `hela_unmodified.py`
   - `hela_modified.py`
 
@@ -104,16 +128,15 @@ from rt_pred.model import build_model_from_hp, set_seed
 
 ## 3.2. Running the code
 
-Make sure your working directory is the project root
-(`c:\Users\Mahin\Downloads\Transformer RT` on Windows).
+Make sure your working directory is the project root (e.g. `c:\Users\Mahin\Downloads\Transformer RT`).
 
-### 2.1 Unmodified Hela experiment
+### 3.2.1. Unmodified Hela experiment
 
-Assume your data file is at:
+Assume your unmodified dataset is located in the following directory -
 
-- `c:\Users\Mahin\Downloads\Transformer RT\hela_unmodified.txt`
+- `Transformer RT\hela_unmodified.txt`
 
-You can run the full pipeline with:
+You can run the full pipeline with -
 
 ```python
 from rt_pred.experiments.hela_unmodified import main as run_unmodified
@@ -122,20 +145,19 @@ from rt_pred.experiments.hela_unmodified import main as run_unmodified
 run_unmodified(root=".")
 ```
 
-This will:
+Outputs:
 
 - Load `./hela_unmodified.txt`
-- Perform HP search (unless disabled in config)
-- Run 5‑fold CV
+- Perform Hyperparameter search
+- Run 5‑fold cross-validation
 - Train the final model
-- Write CSVs (metrics, CV metrics, predictions, training curves)
-  into `root` (here: `.`).
+- Save evaluation metrics and predictions as CSV files in `root` (here: `.`).
 
-#### 2.2 Modified Hela experiment
+### 3.2.2. Modified Hela experiment
 
-Assume your data file is at:
+Assume your modified dataset is located in this dirctory -
 
-- `c:\Users\Mahin\Downloads\Transformer RT\mod_hela_exp.csv`
+- `Transformer RT\mod_hela_exp.csv`
 
 Run:
 
@@ -148,42 +170,41 @@ run_modified(root=".")
 This will:
 
 - Load `./mod_hela_exp.csv`
-- Parse the `Modifications` column, map each modification type
-  to a character from `MOD_CHAR_POOL`
-- Produce modification‑aware sequences
-- Train and evaluate the same model architecture as above
+- Parse the `Modifications` column, map each modification type to a character from `MOD_CHAR_POOL`
+- Generate modification-derived sequences
+- Train and evaluate the same model architecture as used in the unmodified dataset
 - Save all CSV outputs into `root`.
 
-### 3. Using from Jupyter notebooks
+# 4. Using from jupyter notebooks
 
-Inside a notebook in the project root you can call:
+You can run the code directly from jupyter notebook located in the project root -
 
 ```python
 from rt_pred.experiments.hela_unmodified import main as run_unmodified
 from rt_pred.experiments.hela_modified import main as run_modified
 
-# run unmodified dataset
+# Run the unmodified dataset
 run_unmodified(root=".")
 
-# run modified dataset
+# Run the modified dataset
 run_modified(root=".")
 ```
 
-If your data lives in a different folder, just point `root` there:
+If your data is stored in a different directory, simply pass the path to the `root` argument -
 
 ```python
 run_unmodified(root=r"C:\path\to\unmodified_data")
 run_modified(root=r"C:\path\to\modified_data")
 ```
 
-The code expects:
+The code expects the following files in the specified `root` directory -
 
-- `root / "hela_unmodified.txt"` for the unmodified experiment
-- `root / "mod_hela_exp.csv"` for the modified experiment
+- `root / "hela_unmodified.txt"` for the unmodified dataset
+- `root / "mod_hela_exp.csv"` for the modified dataset
 
-### 4. Custom experiments and configuration
+# 5. Code customization and configuration
 
-You can build your own config and run the generic pipeline directly.
+You can define your own configuration and run the generic training pipeline directly
 
 ```python
 from pathlib import Path
@@ -203,7 +224,8 @@ cfg = ExperimentConfig(
 run_experiment(cfg, load_df=load_tsv_unmodified)
 ```
 
-For a modified dataset:
+### Running with a Modified Dataset
+For datasets that include peptide modifications -
 
 ```python
 from rt_pred.config import ExperimentConfig
@@ -218,23 +240,25 @@ cfg = ExperimentConfig(
 run_experiment(cfg, load_df=load_tsv_modified)
 ```
 
-You can also adjust the hyperparameter search grid by modifying
-`cfg.hp_configs` (a list of dicts with keys
-`name, D_MODEL, N_LAYERS, N_HEADS, D_FF, DROPOUT, BASE_LR`).
+### Customizing the Hyperparameter search
+You can modify the hyperparameter search grid by updating `cfg.hp_configs` 
 
-### 5. Where outputs are saved
+This attribute is a list of dictionaries with the following keys -
+`name, D_MODEL, N_LAYERS, N_HEADS, D_FF, DROPOUT, BASE_LR`
 
-All experiment outputs are written into the directory specified
-by `cfg.root` (or the `root` argument passed to the `main` functions):
+# 6. Output Files
 
+The outputs are saved into the directory specified by `cfg.root` (or by the `root` argument passed to the `main` functions)
+
+The following files are generated -
 - `*_cv_metrics.csv` – per‑fold cross‑validation metrics
-- `*_test_predictions_cv.csv` – per‑fold CV predictions
+- `*_test_predictions_cv.csv` – predictions from each cross-validation fold
 - `*_train_history.csv` – training and validation loss per epoch
 - `*_train_predictions.csv` – predictions on the training split
-- `*_validation_predictions.csv` – predictions on the held‑out split
-- `rt_transformer_metrics.csv` – summary metrics per file
+- `*_validation_predictions.csv` – predictions on the validation split
+- `rt_transformer_metrics.csv` – summary metrics for each dataset
 
-# 3. Transformer Architecture
+# 7. Transformer Architecture
 The main architecture is composed of 4 major stages -
 ## 1. Preprocessing of peptide sequences and PTMs -
 
