@@ -299,13 +299,19 @@ The main architecture is composed of 4 major stages -
 ## 5.2. Conformer-lite econding
 
    ![Conformer stack](https://github.com/user-attachments/assets/7346315e-e30a-49f7-ae7c-a309fd03cf7a)
-   
+
+   Conformer-Lite Encoder. The backbone of the proposed model consists of N stacked Conformer-Lite blocks that capture both global dependencies and local sequence motifs through residual connections. Each block includes a half-step Macaron feed-forward layer (FFN1), multi-head self-attention (MHSA), a convolution module, and a second half-step Macaron feed-forward layer (FFN2). FFN1 uses GEGLU activation to learn residue-specific features before global interaction. MHSA models long-range dependencies among peptide residues, while the convolution module captures local motifs and short-range patterns using depth-wise convolution, GLU, and SiLU activation. Finally, the second GEGLU-based FFN integrates attention and convolution features to further refine the representation.
       
 ## 5.3. Hybrid pooling mechanism
 
    ![Hybrid Pooling Mechanism](https://github.com/user-attachments/assets/022a633c-94c0-43a4-b19e-5eb80651bc9b)
 
+   Hybrid pooling concatenates the outputs of the four Conformer-Lite encoder sub-steps, capturing global context, residue-level statistics, and key residue contributions for accurate RT prediction. 
+   The final macaron-style Conformer block is defined as -
 
+   $$
+   H_{\text{Final}} = \tilde{H} + \frac{1}{2}FFN_1 + MHSA + ConvModule + \frac{1}{2}FFN_2
+   $$   
    
 ## 5.4. Regression head
 
@@ -316,4 +322,3 @@ The main architecture is composed of 4 major stages -
    $$
    \text{Predicted RT} = \text{Predicted RT}_{\text{norm}} \times (RT_{\max} - RT_{\min}) + RT_{\min}
    $$
-
