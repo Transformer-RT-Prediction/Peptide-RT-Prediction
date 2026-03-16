@@ -82,14 +82,12 @@ Defines configuration objects and default experiment settings
   - `hela_unmodified_config`,
   - `hela_modified_config`
 
-
 `rt_pred/tokenizer/` – Peptide Tokenization Utilities
 
 Functions for building tokenizers and encoding peptide sequences
   - `infer_alphabet`,
   - `build_tokenizer`,
   - `encode_sequence`
-
 
 `rt_pred/model/` – Model Architecture
 
@@ -115,10 +113,10 @@ Metrics and helper functions for retention time (RT) evaluation
 - `rt_pred/training/` – End‑to‑End Training & Evaluation
 
 Training pipelines and evaluation workflows
-  - `make_ds`,
-  - `tune_hyperparams`,
-  - `run_cross_validation`,
-  - `train_one_file`,
+  - `make_ds`
+  - `tune_hyperparams`
+  - `run_cross_validation`
+  - `train_one_file`
   - `run_experiment`
 
 
