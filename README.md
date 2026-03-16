@@ -93,12 +93,15 @@ Functions for building tokenizers and encoding peptide sequences
 
 Core model components and utilities
   - `schedules.py`
-    – `WarmupCosine` - learning rate scheduler
+    - `WarmupCosine` - learning rate scheduler
+  
   - `layers.py` – encoder and pooling layers
+  
   - `builder.py`
-    – `build_model_from_hp` - construct model from hyperparameters
+    - `build_model_from_hp` - construct model from hyperparameters
+  
   - `utils.py`
-    – `set_seed` - ensure reproducible experiments
+    - `set_seed` - ensure reproducible experiments
 
 `rt_pred/metrics/` – Evaluation and RT unit helpers
 
@@ -108,7 +111,7 @@ Metrics and helper functions for retention time (RT) evaluation
   - `residual_ci95`,
   - `normalize_rt_units`
 
- - `rt_pred/training/` – End‑to‑End Training & Evaluation
+`rt_pred/training/` – End‑to‑End Training & Evaluation
 
 Training pipelines and evaluation workflows
   - `make_ds`
@@ -117,7 +120,7 @@ Training pipelines and evaluation workflows
   - `train_one_file`
   - `run_experiment`
 
-- `rt_pred/data/` – Data Loading and Modification Handling
+`rt_pred/data/` – Data Loading and Modification Handling
 
 Utilities for loading datasets and handling peptide modifications
   - `unmodified.py`
@@ -126,7 +129,7 @@ Utilities for loading datasets and handling peptide modifications
     – `load_tsv_modified`
     - modification parsing helpers
 
-- `rt_pred/experiments/` – Ready-to-Run Experiment Entry Points
+`rt_pred/experiments/` – Ready-to-Run Experiment Entry Points
 
 Scripts for running predefined experiments
   - `hela_unmodified.py`
