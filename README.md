@@ -1,5 +1,6 @@
 # <p align="center"> Retention Time (RT) Prediction of Proteolytic Peptides by Transformer Learning
-![Graphical Abstract2](https://github.com/user-attachments/assets/d17db877-5319-4e60-8dc8-11bd43a33526)
+
+
 
 <div align="center">
   
