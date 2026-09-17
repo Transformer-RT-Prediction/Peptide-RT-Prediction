@@ -22,8 +22,8 @@ cd Peptide-RT-Prediction
 
 # 2. Datasets
 ## 2.1. LC types
-1. RPLC - `Exp. HeLa (unmod. and mod.)`; `HeLa (unmod. and mod.)`; `Yeast`; `Atlantis Silica`; `Xbridge`; `Luna Silica`; `Misc. (mod.)`
-2. HILIC - `Luna HILIC`
+1. RPLC - `Exp. HeLa (unmod. and mod.)`; `HeLa (unmod. and mod.)`; `Yeast`;  `Misc. (mod.)`; `ProteomeTools`
+2. HILIC - `Atlantis Silica`; `Xbridge`; `Luna Silica`; `Luna HILIC`
 3. SCX - `SCX`
 
 | Dataset | Number of Peptides | Peptide Seq Length |
@@ -39,6 +39,7 @@ cd Peptide-RT-Prediction
 | Luna HILIC | 36,080 | 7–51 |
 | Luna Silica | 36,823 | 7–48 |
 | Misc. (modified) | 14,557 | 7–45 |
+| ProteomeTools | 1 million | 7–40 |
 
 See the [datasets](https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction/tree/main/datasets) here
 
