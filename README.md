@@ -1,4 +1,4 @@
-# <p align="center"> Retention Time (RT) Prediction of Proteolytic Peptides by Transformer Learning
+# <p align="center"> Retention Time (RT) Prediction of Tryptic Peptides by Transformer Learning
 ![Graphical Abstract3](https://github.com/user-attachments/assets/c30ef348-f2e7-4672-a397-32fbaf4f2e28)
 
 
