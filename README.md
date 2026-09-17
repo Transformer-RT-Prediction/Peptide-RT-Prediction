@@ -22,23 +22,23 @@ cd Peptide-RT-Prediction
 
 # 2. Datasets
 ## 2.1. LC types
-1. RPLC - `Exp. HeLa (unmod. and mod.)`; `DeepRT HeLa (unmod. and mod.)`; `DeepRT Yeast`; `DeepRT Atlantis Silica`; `DeepLC Xbridge`; `DeepLC Luna Silica`; `DeepLC Misc. (mod.)`
-2. HILIC - `DeepLC Luna HILIC`
-3. SCX - `DeepLC SCX`
+1. RPLC - `Exp. HeLa (unmod. and mod.)`; `HeLa (unmod. and mod.)`; `Yeast`; `Atlantis Silica`; `Xbridge`; `Luna Silica`; `Misc. (mod.)`
+2. HILIC - `Luna HILIC`
+3. SCX - `SCX`
 
 | Dataset | Number of Peptides | Peptide Seq Length |
 |:--------|:-------------------:|:-------------------:|
 | Exp. HeLa | 4,213 | 6–33 |
 | Exp. HeLa (modified) | 704 | 6–27 |
-| DeepRT HeLa | 3,413 | 6–50 |
-| DeepRT HeLa (modified) | 2,243 | 7–50 |
-| DeepRT Yeast | 14,361 | 6–38 |
-| DeepRT Atlantis Silica | 39,091 | 6–49 |
-| DeepLC Xbridge | 40,037 | 6–51 |
-| DeepLC SCX | 30,471 | 6–49 |
-| DeepLC Luna HILIC | 36,080 | 7–51 |
-| DeepLC Luna Silica | 36,823 | 7–48 |
-| DeepLC Misc. (modified) | 14,557 | 7–45 |
+| HeLa | 3,413 | 6–50 |
+| HeLa (modified) | 2,243 | 7–50 |
+| Yeast | 14,361 | 6–38 |
+| Atlantis Silica | 39,091 | 6–49 |
+| Xbridge | 40,037 | 6–51 |
+| SCX | 30,471 | 6–49 |
+| Luna HILIC | 36,080 | 7–51 |
+| Luna Silica | 36,823 | 7–48 |
+| Misc. (modified) | 14,557 | 7–45 |
 
 See the [datasets](https://github.com/Transformer-RT-Prediction/Peptide-RT-Prediction/tree/main/datasets) here
 
