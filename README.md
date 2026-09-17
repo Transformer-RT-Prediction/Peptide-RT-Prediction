@@ -30,7 +30,7 @@ cd Peptide-RT-Prediction
 |:--------|:-------------------:|:-------------------:|
 | Exp. HeLa | 4,213 | 6–33 |
 | Exp. HeLa (modified) | 704 | 6–27 |
-| HeLa | 3,413 | 6–50 |
+| HeLa | 1,170 | 6–50 |
 | HeLa (modified) | 2,243 | 7–50 |
 | Yeast | 14,361 | 6–38 |
 | Atlantis Silica | 39,091 | 6–49 |
