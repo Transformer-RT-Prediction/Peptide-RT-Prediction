@@ -146,7 +146,7 @@ from rt_pred.model import build_model_from_hp, set_seed
 
 ## 3.2. Running the code
 
-Make sure your working directory is the project root (e.g. `c:\Users\Mahin\Downloads\Transformer RT`).
+Make sure your working directory is the project root (e.g. `path\to\Transformer RT`).
 
 ### 3.2.1. Unmodified sequences
 
@@ -236,7 +236,7 @@ from rt_pred.training import run_experiment
 cfg = ExperimentConfig(
     root=Path(r"C:\my\rt\project"),
     files=["my_dataset.tsv"],      # file(s) inside root
-    epochs=300,                    # override defaults if needed
+    epochs=500,                    # override defaults if needed
     batch=128,
     hp_search=True,                # or False to skip HP search
 )
