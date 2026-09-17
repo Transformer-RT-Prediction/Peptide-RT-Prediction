@@ -22,7 +22,7 @@ cd Peptide-RT-Prediction
 
 # 2. Datasets
 ## 2.1. LC types
-1. RPLC - `Exp. HeLa (unmod. and mod.)`; `HeLa (unmod. and mod.)`; `Yeast`;  `Misc. (mod.)`; `ProteomeTools`
+1. RPLC - `Exp. HeLa (unmod. and mod.)`; `HeLa (unmod. and mod.)`; `Yeast`;  `Misc. DIA (mod.)`; `ProteomeTools`
 2. HILIC - `Atlantis Silica`; `Xbridge`; `Luna Silica`; `Luna HILIC`
 3. SCX - `SCX`
 
